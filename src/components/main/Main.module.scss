@@ -1,0 +1,12 @@
+@import "~bootstrap/scss/bootstrap";
+@import "../../stylessheet/base.scss";
+
+.main {
+  padding: 30px 10px 30px 10px;
+  background-color: #e5e5e5;
+  min-height: 700px;
+
+  @include tablet {
+    padding: 30px 30px;
+  }
+}

@@ -1,0 +1,73 @@
+@import "../../stylessheet/base.scss";
+
+.navContainer {
+  color: #fff;
+  background-color: rgb(232, 240, 254);
+  border-radius: 5px;
+  padding: 20px 50px;
+  max-width: 100%;
+  min-height: 120px;
+  align-items: center;
+
+  margin: 0 auto 30px;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.navLink {
+  display: inline-block;
+  text-align: center;
+  padding: 5px 20px;
+  min-width: 150px;
+  background-color: $accent-color-hover;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+}
+
+.navLink:not(:last-child) {
+  margin-right: 10px;
+
+  @include tablet {
+    margin-right: 0;
+  }
+}
+
+.navLink:hover {
+  background-image: linear-gradient(to bottom, #3c9c41, #236727);
+  text-decoration: none;
+}
+
+.navLinkActive {
+  display: inline-block;
+  text-align: center;
+  padding: 5px 20px;
+  min-width: 150px;
+  background-image: linear-gradient(to bottom, #3c9c41, #236727);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.navLinks {
+  justify-content: space-around;
+  display: flex;
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+}
